@@ -1,0 +1,96 @@
+#carousel-img{
+    width: "100%";
+    height:"300px" !important;
+    margin-top: 100;
+}
+
+.menu-bg{
+    background-color: #000;
+}
+
+
+.login-btn{
+    width: 100%;
+    border: none;
+    background-color:#0a0a0a ;
+    color: white;
+    font-weight: 700;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+
+.toggle-btn{
+    width: 100%;
+    margin-top: 20px;
+    background:#000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: rgb(255, 255, 255);
+}
+
+.forget-pass{
+    margin-left: 260px;
+}
+
+.explore-img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 180px;
+}
+
+.explore-card{
+    height: 420px;
+}
+.buyNow-btn{
+    /* background-color: none; */
+    background-color: rgb(243, 151, 3) !important;
+    border: none !important;
+}
+
+.card-price{
+    margin-left: 80px;
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    /* background-color: #000; */
+    color: rgb(207, 17, 17);
+    font-weight: 700;
+
+}
+
+.bookingBtn{
+    border: none;
+    background-color: #006576;
+    padding: 5px 15px;
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    /* border-radius: 5px; */
+}
+
+.booking-form{
+    border: 1px solid rgb(235, 231, 231);
+    /* background-color: #34474b; */
+    
+}
+
+.nav-brand{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size:25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.price-header{
+    background-color: #006576;
+    color: rgb(255, 255, 255);
+    padding-top: 1px;
+    /* padding-bottom: 1px; */
+}
+
+.productKey{
+    font-weight: bold;
+    color: #ecb605;
+}

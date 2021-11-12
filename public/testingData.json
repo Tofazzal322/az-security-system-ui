@@ -1,0 +1,127 @@
+// https://i.ibb.co/sRt3gmY/7-A26-G0-P-LZHS-png-thumb-1280-1280.png
+// https://i.ibb.co/gJCpPDx/7-AXX-Bullet-01-png-thumb-1280-1280.png
+// https://i.ibb.co/Y0M7qx2/70-XX-Box-01-png-thumb-1280-1280.png
+// https://i.ibb.co/cQ9wQ4W/71-XX-Dome-01-png-thumb-1280-1280.png
+// https://i.ibb.co/DY3RQRk/75-XX-Dome-03-jpg-thumb-1280-1280.jpg
+// https://i.ibb.co/vB1kmXx/1331-B-5-png-thumb-1280-1280.png
+// https://i.ibb.co/98ZZ5pM/1331-B-5-png-thumb-1280-1280.png
+// https://i.ibb.co/cFQVySS/DF7-png-thumb-1280-1280.png
+// https://i.ibb.co/s5f4Zkt/DS-2-XC6122-FWD-IS-35-png-thumb-1280-1280.png
+// https://i.ibb.co/w7HDvYC/45-png-thumb-1280-1280.png
+// https://i.ibb.co/kgV6ZZx/14-png-thumb-1280-1280.png
+// https://i.ibb.co/m8SZMtN/2-png-thumb-1280-1280.png
+
+
+
+
+[
+    {   "name":"4 MP  Box Camera",
+        "model":"DS-2CD7046G0-(AP)",
+        "description":"High quality imaging with 4 MP resolution Excellent low-light performance via DarkFighter technology Clear imaging against strong back light due to LightFighter technology",
+        "price":"79",
+        "productImg":"https://i.ibb.co/sRt3gmY/7-A26-G0-P-LZHS-png-thumb-1280-1280.png",
+        "productId":"3211",
+        "status":"pending"
+
+    },
+    {
+        "name":"2 MP  Indoor Dome Camera",
+        "model":"iDS-2CD7026G0/E-i(AP)",
+        "description":"Advanced streaming technology enables smooth live view and data self-correction in poor network 5 streams and up to 5 custom streams to meet a wide variety of applications 6 behavior analyses, 3 exception detection, and face detectionWater and dust resistant and vandal proof (IP67 and IK10).",
+        "price":"100",
+        "productImg":"https://i.ibb.co/gJCpPDx/7-AXX-Bullet-01-png-thumb-1280-1280.png",
+        "productId":"3212",
+        "status":"pending"
+    },
+    {
+        "name":"2 MP  Bullet Camera",
+        "model":"DS-2CD7A26G0-IZ(H)S",
+        "description":"High quality imaging with 2 MP resolution Excellent low-light performance via DarkFighter technology Clear imaging against strong back light thanks to LightFighter technology Intelligent functions based on deep learning Efficient H.265+ compression technology to save bandwidth and storage",
+        "price":"124",
+        "productImg":"https://i.ibb.co/Y0M7qx2/70-XX-Box-01-png-thumb-1280-1280.png",
+        "productId":"3213",
+        "status":"pending"
+    },
+    {
+        "name":"2MP  Box With Housing Camera",
+        "model":"DS-2CD7046G0-(AP)",
+        "description":"High quality imaging with 2 MP resolution Excellent low-light performance via DarkFighter technology Clear imaging against strong back light thanks to LightFighter technology Intelligent functions based on deep learning Efficient H.265+ compression technology to save bandwidth and storage",
+        "price":"251",
+        "productImg":"https://i.ibb.co/cQ9wQ4W/71-XX-Dome-01-png-thumb-1280-1280.png",
+        "productId":"3214",
+        "status":"pending"
+    },
+    {
+        "name":"2MP DeepinView ANPR Box With Housing Camera",
+        "model":"iDS-2CD7026G0/EP-IHSY",
+        "description":"High quality imaging with 2 MP resolution Excellent low-light performance via DarkFighter technology Clear imaging against strong back light thanks to LightFighter technology Intelligent functions based on deep learning Efficient H.265+ compression technology to save bandwidth and storage",
+        "price":"410",
+        "productImg":"https://i.ibb.co/DY3RQRk/75-XX-Dome-03-jpg-thumb-1280-1280.jpg",
+        "productId":"3215",
+        "status":"pending"
+    },
+    {
+        "name":"2 MP  ANPR Moto Varifocal Bullet Camera",
+        "model":"DS-2CD7A26G0/P-LZ(H)",
+        "description":"High quality imaging with 2 MP resolution Excellent low-light performance via DarkFighter technology Clear imaging against strong back light thanks to LightFighter technology Intelligent functions based on deep learning Efficient H.265+ compression technology to save bandwidth and storage",
+        "price":"73",
+        "productImg":"https://i.ibb.co/vB1kmXx/1331-B-5-png-thumb-1280-1280.png",
+        "productId":"3216",
+        "status":"pending"
+    },
+    {
+        "name":"2 MP  Flow Analysis Indoor Dome Camera",
+        "model":"DS-2CD7126G0/L-IZS",
+        "description":"High quality imaging with 2 MP resolution Excellent low-light performance via DarkFighter technology Clear imaging against strong back light thanks to LightFighter technology Intelligent functions based on deep learning Efficient H.265+ compression technology to save bandwidth and storage",
+        "price":"510",
+        "productImg":"https://i.ibb.co/98ZZ5pM/1331-B-5-png-thumb-1280-1280.png",
+        "productId":"3217",
+        "status":"pending"
+    },
+    {
+        "name":"2 MP  Outdoor  Dome Camera",
+        "model":"DS-2CD7526G0-IZ(H)S",
+        "description":"High quality imaging with 2 MP resolution Excellent low-light performance via DarkFighter technology Clear imaging against strong back light thanks to LightFighter technology Intelligent functions based on deep learning Efficient H.265+ compression technology to save bandwidth and storage",
+        "price":"320",
+        "productImg":"https://i.ibb.co/cFQVySS/DF7-png-thumb-1280-1280.png",
+        "productId":"3218",
+        "status":"pending"
+    },
+    {
+        "name":"4 MP DeepinView Moto Varifocal Box Camera",
+        "model":"DS-2CD7046G0-(AP)",
+        "description":"High quality imaging with 2 MP resolution Excellent low-light performance via DarkFighter technology Clear imaging against strong back light thanks to LightFighter technology Intelligent functions based on deep learning Efficient H.265+ compression technology to save bandwidth and storage",
+        "price":"231",
+        "productImg":"https://i.ibb.co/s5f4Zkt/DS-2-XC6122-FWD-IS-35-png-thumb-1280-1280.png",
+        "productId":"3219",
+        "status":"pending"
+    },
+    {
+        "name":"7-inch 2 MP 32X  IR Network Speed Dome",
+        "model":"DS-2SE7C124IW-AE(32x/4)(S5)",
+        "description":"Progressive Scan CMOS Up to 2560× 1440@30fps resolution Min. illumination: [PTZ channel]：Color：0.005Lux @ (F1.2，GC ON),B/W：0.001Lux @ (F1.2，AGC ON) ,[panoramic channel]：0.005Lux @(F1.6,AGC ON) ,0 Lux with IR ",
+        "price":"1010",
+        "productImg":"https://i.ibb.co/w7HDvYC/45-png-thumb-1280-1280.png",
+        "productId":"3220",
+        "status":"pending"
+    },
+    {
+        "name":"7-inch 2 MP 25X DarkFighter IR Network Speed Dome",
+        "model":"DS-2DF7225IX-AELW(T3)",
+        "description":"Progressive Scan CMOS Up to 23X zoom: zoom to examine subjects of interest within expansive scenes resolution Min. illumination: [PTZ channel]：Color：0.005Lux @ (F1.2，GC ON),B/W：0.001Lux @ (F1.2，AGC ON) ,[panoramic channel]：0.005Lux @(F1.6,AGC ON) ,0 Lux with IR ",
+        "price":"1210",
+        "productImg":"https://i.ibb.co/kgV6ZZx/14-png-thumb-1280-1280.png",
+        "productId":"3221",
+        "status":"pending"
+    },
+    {
+        "name":"EXIR 23x Bullet Explosion-proof Network Camera",
+        "model":"DS-2DB4223I-CX",
+        "description":"Explosion-proof design: the camera has passed international ATEX & IECEx certifications, and can be used in gas and dust hazardous scenarios Protecting the camera from damage caused by sparks or corrosive materials",
+        "price":"710",
+        "productImg":"https://i.ibb.co/m8SZMtN/2-png-thumb-1280-1280.png",
+        "productId":"3222",
+        "status":"pending"
+    }
+
+]
