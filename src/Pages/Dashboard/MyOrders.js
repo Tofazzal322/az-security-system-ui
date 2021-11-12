@@ -28,17 +28,17 @@ const MyOrders = () => {
   console.log(myOrders, user.email);
 
   useEffect(() => {
-    // const url = `http://localhost:5000/products?email=${user.email}&date=${date}`;
-    const url = `http://localhost:5000/orders?email=${user.email}`;
+    // const url = `https://fathomless-shelf-34125.herokuapp.com/products?email=${user.email}&date=${date}`;
+    const url = `https://fathomless-shelf-34125.herokuapp.com/orders?email=${user.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
-  }, []);
+  }, [user.email]);
 
   // /////////////Delete orders  option////////////////
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://fathomless-shelf-34125.herokuapp.com/orders/${id}`;
     fetch(url, {
       method: "DELETE",
     })

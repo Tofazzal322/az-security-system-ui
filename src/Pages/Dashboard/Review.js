@@ -11,7 +11,7 @@ const Review = () => {
 
   const onSubmit = (data) => {
     // setSubmitData(data);
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://fathomless-shelf-34125.herokuapp.com/reviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

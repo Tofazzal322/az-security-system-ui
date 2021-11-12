@@ -18,7 +18,7 @@ const Purchase = () => {
 
   // /////// Specific items Api//////////////
   useEffect(() => {
-    const url = `http://localhost:5000/products/${productId}`;
+    const url = `https://fathomless-shelf-34125.herokuapp.com/products/${productId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setProducts(data));
@@ -27,7 +27,7 @@ const Purchase = () => {
   //////////////////////////////////////////////////////////
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/orders", {
+    fetch("https://fathomless-shelf-34125.herokuapp.com/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

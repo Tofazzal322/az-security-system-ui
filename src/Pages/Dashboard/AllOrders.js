@@ -9,7 +9,7 @@ const AllOrders = () => {
 
   ///////////////////////////////////////////////////////////////
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://fathomless-shelf-34125.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => {
         if (!data) {
@@ -26,7 +26,7 @@ const AllOrders = () => {
   // /////////////Delete orders  option////////////////
 
   const handleDelete = (id) => {
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://fathomless-shelf-34125.herokuapp.com/orders/${id}`;
     fetch(url, {
       method: "DELETE",
     })

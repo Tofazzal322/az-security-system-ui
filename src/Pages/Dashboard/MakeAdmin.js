@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-// import Button from "@mui/material/Button";
 import { Alert } from "@mui/material";
 import useAuth from "../../hook/useAuth";
-import { TextField } from "@mui/material";
 import Button from "@restart/ui/esm/Button";
 
 const MakeAdmin = () => {
@@ -16,7 +14,7 @@ const MakeAdmin = () => {
 
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://fathomless-shelf-34125.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         authorization: `Bearer ${token}`,
@@ -37,10 +35,10 @@ const MakeAdmin = () => {
   return (
     <div>
       <h1 className="product-title fs-3 w-50"> Make an Admin</h1>
-      <form style={{marginTop:"50px"}} onSubmit={handleAdminSubmit}>
+      <form style={{ marginTop: "50px" }} onSubmit={handleAdminSubmit}>
         <input
           className="input-field w-50"
-        //   sx={withWidth}
+          //   sx={withWidth}
           id="standard-basic"
           label="Email"
           placeholder="Email"
@@ -48,7 +46,12 @@ const MakeAdmin = () => {
           variant="standard"
           onBlur={handleOnBlur}
         />
-        <Button className="purchase-btn mt-3 w-50" sx={{mt:2, ml:2}} variant="outline" type="submit">
+        <Button
+          className="purchase-btn mt-3 w-50"
+          sx={{ mt: 2, ml: 2 }}
+          variant="outline"
+          type="submit"
+        >
           {" "}
           Make Admin{" "}
         </Button>

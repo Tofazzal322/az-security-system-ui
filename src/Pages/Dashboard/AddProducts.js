@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useHistory, useLocation, useParams } from "react-router";
-import useAuth from "../../hook/useAuth";
-
 
 const AddProducts = () => {
-  const { user } = useAuth();
   const [status, setStatus] = useState(false);
   const { register, handleSubmit, reset } = useForm();
- 
-//   const location = useLocation();
-//   const history = useHistory();
-//   const redirect_uri = location.state?.from || "/explore";
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/products", {
+    fetch("https://fathomless-shelf-34125.herokuapp.com/products", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -25,13 +17,16 @@ const AddProducts = () => {
         setStatus(!status);
         alert("Successfully Added A Product into database....  ");
         reset();
-        // history.push(redirect_uri);
       })
       .catch((err) => console.log(err));
   };
+
   return (
-      <div className="px-3 mb-5 ">
-          <h3 className="mb-3 product-title w-50 ms-5"> New Products Add to Database </h3>
+    <div className="px-3 mb-5 ">
+      <h3 className="mb-3 product-title w-50 ms-5">
+        {" "}
+        New Products Add to Database{" "}
+      </h3>
       <Row className="align-center container">
         <Col className=" booking-form  px-3 mb-5" xs={12} md={6}>
           <form className="mb-4" onSubmit={handleSubmit(onSubmit)}>

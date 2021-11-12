@@ -14,7 +14,7 @@ const UpdateOrders = () => {
   // console.log(manageOrders);
 
   useEffect(() => {
-    const url = `http://localhost:5000/orders/${ordersId}`;
+    const url = `https://fathomless-shelf-34125.herokuapp.com/orders/${ordersId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -24,15 +24,12 @@ const UpdateOrders = () => {
           </Spinner>;
         } else {
           setManageOrders(data);
-          
         }
-        
       });
-    
   }, [ordersId]);
 
   const onSubmit = (data) => {
-    const url = `http://localhost:5000/orders/${ordersId}`;
+    const url = `https://fathomless-shelf-34125.herokuapp.com/orders/${ordersId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -52,7 +49,6 @@ const UpdateOrders = () => {
           history.push(redirect_uri);
         }
       });
-    
   };
 
   
