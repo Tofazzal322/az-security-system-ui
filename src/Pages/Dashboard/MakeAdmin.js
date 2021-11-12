@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import { Alert } from "@mui/material";
 import useAuth from "../../hook/useAuth";
 import { TextField } from "@mui/material";
+import Button from "@restart/ui/esm/Button";
 
 const MakeAdmin = () => {
   const [email, setEmail] = useState("");
@@ -35,17 +36,19 @@ const MakeAdmin = () => {
 
   return (
     <div>
-      <h1> Make an Admin</h1>
+      <h1 className="product-title fs-3 w-50"> Make an Admin</h1>
       <form style={{marginTop:"50px"}} onSubmit={handleAdminSubmit}>
-        <TextField
+        <input
+          className="input-field w-50"
         //   sx={withWidth}
           id="standard-basic"
           label="Email"
+          placeholder="Email"
           type="email"
           variant="standard"
           onBlur={handleOnBlur}
         />
-        <Button sx={{mt:2, ml:2}} variant="contained" type="submit">
+        <Button className="purchase-btn mt-3 w-50" sx={{mt:2, ml:2}} variant="outline" type="submit">
           {" "}
           Make Admin{" "}
         </Button>

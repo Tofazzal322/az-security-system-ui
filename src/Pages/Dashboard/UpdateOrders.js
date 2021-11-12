@@ -1,24 +1,34 @@
 import React, { useEffect, useState } from "react";
-import { Col, Image, Row } from "react-bootstrap";
+import { Col,  Row, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router";
-import useAuth from "../../hook/useAuth";
-import useData from "../../hook/useData";
+import { useHistory, useLocation, useParams} from "react-router";
 import Footer from "../Shared/Footer";
 
 const UpdateOrders = () => {
-  const { user } = useAuth();
-  const { data } = useData();
   const { register, handleSubmit, reset } = useForm();
   const { ordersId } = useParams();
-  const [manageOrders, setManageOrders]  = useState({});
-  console.log(ordersId, manageOrders);
+  const [manageOrders, setManageOrders] = useState({});
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/";
+  // console.log(manageOrders);
 
   useEffect(() => {
     const url = `http://localhost:5000/orders/${ordersId}`;
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setManageOrders(data));
+      .then((data) => {
+        if (!data) {
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>;
+        } else {
+          setManageOrders(data);
+          
+        }
+        
+      });
+    
   }, [ordersId]);
 
   const onSubmit = (data) => {
@@ -39,24 +49,21 @@ const UpdateOrders = () => {
           reset();
         } else {
           alert("No documents matched the query. Update 0 documents.");
+          history.push(redirect_uri);
         }
       });
-    // console.log("object");
+    
   };
 
-  const product = data.filter((item) => item._id === ordersId);
-  console.log(data, product);
+  
   return (
     <div>
       <div className="px-3 container">
         <h2 className="text-center mt-2 product-title ">UPDATE ALL ORDERS</h2>
         <Row className="mt-5 ">
           <Col className="pe-5" xs={12} md={6}>
-            <Image className="w-100" src={manageOrders?.productImg} alt="" />
-            <h2>{manageOrders?.name}</h2>
-            <h4> {manageOrders?.price} </h4>
-            {/* <h5> {manageOrders.duration} </h5> */}
-            <p> {manageOrders?.description} </p>
+            <h2> {manageOrders.productId} </h2>
+            <h2> {manageOrders.productName} </h2>
           </Col>
 
           <Col className=" booking-form  px-3 mb-5" xs={12} md={6}>
@@ -66,7 +73,7 @@ const UpdateOrders = () => {
                   {" "}
                   Starts From :{" "}
                   <span className="fs-4 text-warning fw-bold">
-                    {manageOrders?.price}
+                    {manageOrders?.productPrice}
                   </span>
                 </p>
               </div>
@@ -79,10 +86,9 @@ const UpdateOrders = () => {
                 <Col>
                   <h5>Package Name *</h5>
                   <input
-                    type="text"
                     className="w-100 h-75"
-                    defaultValue={manageOrders?.name}
-                    {...register("name")}
+                    defaultValue={manageOrders?.productName}
+                    {...register("productName")}
                   />
                 </Col>
               </Row>
@@ -92,7 +98,7 @@ const UpdateOrders = () => {
                   <h5>Email *</h5>
                   <input
                     className="w-100 h-75"
-                    defaultValue={user?.email}
+                    defaultValue={manageOrders?.email}
                     {...register("email")}
                   />
                 </Col>
@@ -100,8 +106,8 @@ const UpdateOrders = () => {
                   <h5>Name *</h5>
                   <input
                     className="w-100 h-75"
-                    defaultValue={user?.displayName}
-                    {...register("name")}
+                    defaultValue={manageOrders?.buyerName}
+                    {...register("buyerName")}
                   />
                 </Col>
               </Row>
@@ -109,10 +115,8 @@ const UpdateOrders = () => {
                 <Col>
                   <h5>Status *</h5>
                   <input
-                    type="text"
                     className="w-100 h-75"
-                    // defaultValue={manageOrders.key}
-                    placeholder="Pending"
+                    defaultValue={manageOrders?.status}
                     {...register("status")}
                   />
                 </Col>
@@ -120,7 +124,7 @@ const UpdateOrders = () => {
                   <h5>Address *</h5>
                   <input
                     className="w-100 h-75"
-                    placeholder="Address"
+                    defaultValue={manageOrders?.Address}
                     {...register("Address")}
                   />
                 </Col>
@@ -138,8 +142,7 @@ const UpdateOrders = () => {
                 <Col>
                   <h5>Mobile *</h5>
                   <input
-                    type="number"
-                    placeholder="Mobile"
+                    defaultValue={manageOrders?.mobile}
                     className="w-100 h-75"
                     {...register("mobile")}
                   />
@@ -151,7 +154,7 @@ const UpdateOrders = () => {
                   <h5>Your Message</h5>
                   <textarea
                     className="w-100 h-100"
-                    placeholder="Your Massage"
+                    defaultValue={manageOrders?.message}
                     {...register("message")}
                   />
                 </Col>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import MyOrders from './MyOrders';
 import Calendar from '../Shared/Calendar';
 import { Col, Row } from 'react-bootstrap';
 

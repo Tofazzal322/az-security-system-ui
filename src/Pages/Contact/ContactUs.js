@@ -2,15 +2,13 @@ import React from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import contactImg from "../../images/Headquarters 2.jpg";
 import Footer from "../Shared/Footer";
-// import useData from '../../hooks/useData';
+
 
 const ContactUs = () => {
-  // const {data}=useData()
   return (
     <div>
       <div className="container mt-5 mb-5">
         <h3 className="mb-5 text-primary">CONTACT WITH US</h3>
-        {/* <hr className="w-25" /> */}
         <Row className=" mt-5 contact-section">
           <Col className="mt-1">
             <h3>Az Security System LLC</h3>

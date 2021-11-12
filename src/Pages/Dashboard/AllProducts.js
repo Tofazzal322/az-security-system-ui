@@ -1,53 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Col, Image, Row, Spinner } from "react-bootstrap";
+import { Col, Image, Row } from "react-bootstrap";
 import Button from "@restart/ui/esm/Button";
-// import SingleAppointment from "./SingleAppointment";
 
-///////////////////// Mui Table Code ///////////////////////////////
-const columns = [
-  { id: "productName", label: "Product Name", minWidth: 100 },
-  { id: "productId", label: "Product ID", minWidth: 100 },
-  { id: "productPrice", label: "Product Price", minWidth: 100 },
-  {
-    id: "serviceName",
-    label: "Action",
-    minWidth: 80,
-    align: "center",
-    format: (value) => value,
-  },
-];
-///////////////////// Mui Table Code ///////////////////////////////
+
+
 
 //////////////////////////////////////////////////////////////////
 const AllProducts = ({ data }) => {
-  // const { user,token } = useAuth();
+
   const [allProducts, setAllProducts] = useState([]);
-  // console.log(data);
-  ///////////////////// Mui Table Code Start ///////////////////////////////
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value);
-    setPage(0);
-  };
-  ///////////////////// Mui Table Code End ///////////////////////////////
-
-  ////////////////////////// Search With Date And  Email /////////////////////////////////////////
-  // useEffect(() => {
-  //   const url = `http://localhost:5000/products?email=${user.email}&date=${date}`;
-  //   fetch(url, {
-  //     headers: {
-  //       'authorization': `Bearer ${token}`
-  //     }
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => setAppointments(data));
-  // }, [user.email,token,date]);
+ 
+  
 
   useEffect(() => {
     fetch("http://localhost:5000/products")
@@ -79,7 +43,7 @@ const AllProducts = ({ data }) => {
         </Col>
       </Row>
       {allProducts.map((item) => (
-        <Row className=" all-product-row mt-2 mb-3 py-3">
+        <Row key={item._id} className=" all-product-row mt-2 mb-3 py-3">
           <Col md={2}>
             <Image className="w-50" src={item.productImg} />
           </Col>

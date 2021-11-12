@@ -45,7 +45,8 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle(location, history);
   };
-  //////////////////////////////
+  ////////////////////////////////////////////////////////
+  
   return (
     <Box>
       <Container >
@@ -101,7 +102,6 @@ const Login = () => {
                 variant="primary"
                 type="submit"
 
-                // onClick={loginUser}
               >
                 Login
               </Button>
