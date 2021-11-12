@@ -1,5 +1,6 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Box, styled } from "@mui/system";
+import Button from "@restart/ui/esm/Button";
 import React from "react";
 import aboutImg from "../../images/DUBAI FZE.jpg";
 
@@ -21,7 +22,7 @@ const About = () => {
         sx={{ display: "flex" }}
       >
         <Grid item xs={4} sm={8} md={6} lg={8}>
-          <Typography sx={{ color: "#b3b300", fontWeight: 700 }} variant="h4">
+          <Typography sx={{ color: "#ff6666", fontWeight: 700 }} variant="h4">
             ABOUT US
           </Typography>
           <Typography sx={{ color: " #4d4d00", py: 1 }} variant="body1">
@@ -35,7 +36,7 @@ const About = () => {
             also provide powerful business intelligence for end users, which can
             enable more efficient operations and greater commercial success.
           </Typography>
-          <Button sx={{ backgroundColor: "#000" }} variant="contained">
+          <Button className="purchase-btn"  variant="button">
             {" "}
             Read More
           </Button>

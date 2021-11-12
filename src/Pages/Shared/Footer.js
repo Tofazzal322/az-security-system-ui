@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <Box >
       <CssBaseline />
-      <Grid sx={{ backgroundColor: "#000", width: "auto", px: 8 }}>
+      <Grid sx={{ backgroundColor: "	#ff4d4d", width: "auto", px: 8 }}>
         <Grid>
           <Typography  sx={{ textAlign: "right", color: "#fff", p: 3 }}>
                       <FacebookIcon sx={{marginLeft:"10px"}} />

@@ -1,21 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Paper from "@mui/material/Paper";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TablePagination from "@mui/material/TablePagination";
-import TableRow from "@mui/material/TableRow";
-import useAuth from "../../hook/useAuth";
-import { Spinner } from "react-bootstrap";
-import SingleProduct from "./SingleProduct";
+import { Col, Image, Row, Spinner } from "react-bootstrap";
+import Button from "@restart/ui/esm/Button";
 // import SingleAppointment from "./SingleAppointment";
 
 ///////////////////// Mui Table Code ///////////////////////////////
 const columns = [
-  { id: "patientName", label: "Patient Name", minWidth: 100 },
-  { id: "date", label: "Schedule", minWidth: 100 },
+  { id: "productName", label: "Product Name", minWidth: 100 },
+  { id: "productId", label: "Product ID", minWidth: 100 },
+  { id: "productPrice", label: "Product Price", minWidth: 100 },
   {
     id: "serviceName",
     label: "Action",
@@ -27,10 +19,10 @@ const columns = [
 ///////////////////// Mui Table Code ///////////////////////////////
 
 //////////////////////////////////////////////////////////////////
-const AllProducts = () => {
-  const { user,token,data } = useAuth();
+const AllProducts = ({ data }) => {
+  // const { user,token } = useAuth();
   const [allProducts, setAllProducts] = useState([]);
-console.log(data);
+  // console.log(data);
   ///////////////////// Mui Table Code Start ///////////////////////////////
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -61,51 +53,56 @@ console.log(data);
     fetch("http://localhost:5000/products")
       .then((res) => res.json())
       .then((data) => {
-        setAllProducts(data)
+        setAllProducts(data);
       });
   }, []);
 
   /////////////////////////////////////////////////////////////////////////////////
 
   return (
-    <Paper sx={{ width: "100%", overflow: "hidden" }}>
-      <h2> All Products</h2>
-      <TableContainer sx={{ maxHeight: 340 }}>
-        <Table stickyHeader aria-label="sticky table">
-          <TableHead>
-            <TableRow>
-              {columns.map((column) => (
-                <TableCell
-                  key={column.id}
-                  align={column.align}
-                  style={{ minWidth: column.minWidth }}
-                >
-                  {column.label}
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {allProducts
-              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((row) => (
-                
-                <SingleProduct key={row.productId} row={row}> </SingleProduct>
-              ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
-        component="div"
-        count={allProducts.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onPageChange={handleChangePage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
-      />
-    </Paper>
+    <div className="container">
+      <Row className="table-header">
+        <Col>
+          <h5 className=" text-danger"> Product Image </h5>
+        </Col>
+        <Col className="table-data">
+          <h5 className=" text-danger"> Product Name </h5>
+        </Col>
+        <Col className="table-data">
+          <h5 className=" text-danger ms-5"> Product Price </h5>
+        </Col>
+        <Col className="table-data">
+          <h5 className=" text-danger"> Product ID </h5>
+        </Col>
+        <Col>
+          <h5 className=" text-danger"> Update & Delete </h5>
+        </Col>
+      </Row>
+      {allProducts.map((item) => (
+        <Row className=" all-product-row mt-2 mb-3 py-3">
+          <Col md={2}>
+            <Image className="w-50" src={item.productImg} />
+          </Col>
+          <Col md={4}>
+            <h5 className="table-data"> {item.name} </h5>
+          </Col>
+          <Col md={2}>
+            <h5> {item.price}</h5>
+          </Col>
+          <Col md={1}>
+            <h5 className="table-data">{item.productId}</h5>
+          </Col>
+          <Col md={3}>
+            <div className="action-btn">
+              <Button className="purchase-btn"> Update</Button>
+              <Button className="purchase-btn">Delete </Button>
+            </div>
+          </Col>
+        </Row>
+      ))}
+    </div>
   );
 };
 
 export default AllProducts;
+

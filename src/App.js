@@ -15,6 +15,7 @@ import MenuBar from "./Pages/Shared/MenuBar";
 import '../src/Pages/Style/Style.css'
 import UpdateOrders from "./Pages/Dashboard/UpdateOrders";
 import ContactUs from "./Pages/Contact/ContactUs";
+import Payments from "./Pages/Dashboard/Payments";
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route  path="/contactUs">
             <ContactUs></ContactUs>
+          </Route>
+          <Route  path="/payments">
+            <Payments></Payments>
           </Route>
           <PrivateRoute  path="/purchase/:productId">
             <Purchase></Purchase>

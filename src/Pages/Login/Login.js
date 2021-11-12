@@ -48,23 +48,26 @@ const Login = () => {
   //////////////////////////////
   return (
     <Box>
-      <Container>
-        <Grid container spacing={2}>
+      <Container >
+        <Grid  container spacing={2}>
           <Grid
+            className="review-form mb-5 pt-3 "
             item
             sx={{ backgroundColor: "white", mt: 8, p: 5, py: 10 }}
             xs={12}
             md={6}
           >
             <Typography
-              sx={{ color: "blue", fontWeight: 600 }}
+              className="product-title"
+              
               variant="h4"
               gutterBottom
             >
               Please Login
             </Typography>
-            <form onSubmit={handleLoginSubmit}>
+            <form  onSubmit={handleLoginSubmit}>
               <TextField
+                
                 sx={{ width: "98%", m: 1 }}
                 id="standard-basic"
                 label="Your Email"
@@ -94,7 +97,7 @@ const Login = () => {
               </Form.Group>
 
               <Button
-                className="login-btn  btn-outline-warning text-light mb-4 mt-2"
+                className="login-btn  text-light mb-4 mt-2"
                 variant="primary"
                 type="submit"
 

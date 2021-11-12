@@ -5,11 +5,13 @@
 }
 
 .menu-bg{
-    background-color: #000;
+    /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); */
+    background-color:	#ff8080;
 }
 
 
 .login-btn{
+    
     width: 100%;
     border: none;
     background-color:#0a0a0a ;
@@ -44,16 +46,15 @@
     height: 420px;
 }
 .buyNow-btn{
-    /* background-color: none; */
-    background-color: rgb(243, 151, 3) !important;
-    border: none !important;
+    border: 0 !important;
+     background-color:#ff4d4d !important;
+     color: #f5f1f1 !important;
 }
 
 .card-price{
     margin-left: 80px;
     font-size: 1.5rem;
     padding: 5px 15px;
-    /* background-color: #000; */
     color: rgb(207, 17, 17);
     font-weight: 700;
 
@@ -66,12 +67,12 @@
     width: 100%;
     color: white;
     font-weight: 600;
-    /* border-radius: 5px; */
+
 }
 
 .booking-form{
     border: 1px solid rgb(235, 231, 231);
-    /* background-color: #34474b; */
+
     
 }
 
@@ -87,7 +88,7 @@
     background-color: #006576;
     color: rgb(255, 255, 255);
     padding-top: 1px;
-    /* padding-bottom: 1px; */
+    
 }
 
 .productKey{
@@ -98,8 +99,89 @@
 .nav-items-btn{
     text-decoration: none;
     border: none;
-    background-color: #ece805;
+    background-color:#ffe6e6;
     padding: 5px 10px;
     border-radius: 2px;
     font-weight: 900;
+}
+
+.product-name{
+    color: #ff6666;
+}
+
+.purchase-btn{
+    margin-left: 10px;
+    margin-bottom: 10px;
+     text-decoration: none;
+     border: none;
+     font-weight: 600;
+      padding: 5px 10px;
+     background-color:#ff4d4d;
+     color: #f5f1f1;
+     border-radius: 2px;
+}
+
+.product-card:hover{
+    background-color: #f5f1f1;
+    box-shadow: 5px 5px 1px 0.1px #ffe6e6;;
+    
+}
+
+.product-title{
+    border: 1px solid 	#ff8080;
+    border-radius: 50px;
+    text-align: center;
+    color: #ff6666;
+}
+
+.review-form{
+    border: 1px solid 	#ff8080;
+    padding: 20px;
+    align-items: center;
+}
+
+.input-field{
+    border: 1px solid 	#ff8080;
+    padding: 7px;
+    align-items: center;
+}
+
+.product-name{
+    color: #ff6666;
+}
+
+.total-card{
+    
+    border-radius: 5px;
+    background: #000;
+    width:auto;
+    height: 150px;
+    margin: 10px;
+    color: aliceblue;
+    
+}
+
+.action-btn{
+    text-align: right;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.all-product-row{
+    border: 1px solid #ff9999;
+    /* background: #d4d2d2; */
+}
+
+.table-header{
+    padding: 10px;
+    background: #ff9999;
+    position:sticky;
+}
+
+.table-data{
+    text-align: center;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
 }

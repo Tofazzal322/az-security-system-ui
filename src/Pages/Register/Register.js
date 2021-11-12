@@ -31,8 +31,19 @@ const Register = () => {
     <Box>
       <Container sx={{ mb: 8 }}>
         <Grid container spacing={2}>
-          <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-            <Typography sx={{fontWeight:700,color:"blue"}} variant="h4" gutterBottom>
+          <Grid
+            className="input-field  py-5"
+            item
+            sx={{ mt: 8 }}
+            xs={12}
+            md={6}
+          >
+            <Typography
+              className="product-title w-75"
+              sx={{ fontWeight: 700 }}
+              variant="h4"
+              gutterBottom
+            >
               Create User{" "}
             </Typography>
             {!isLoading && (

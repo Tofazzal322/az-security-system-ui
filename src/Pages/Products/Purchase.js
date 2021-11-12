@@ -48,7 +48,7 @@ const Purchase = () => {
       <Row className="mt-5 ">
         <Col className="pe-5" xs={12} md={6}>
           <Image className="w-50" src= {products?.productImg} alt="" />
-          <h2 className="text-primary"> {products?.name}</h2>
+          <h2 className="product-name"> {products?.name}</h2>
           <h4 className="text-danger fw-bold fs-4"> Price: ${products?.price} </h4>
           <p className="text-dark"> {products?.description} </p>
         </Col>

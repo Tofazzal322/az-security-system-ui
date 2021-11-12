@@ -4,10 +4,12 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
-// import useData from "../../hook/useData";
+// import {  useRouteMatch,Switch,Route } from "react-router-dom";
 import { Box } from "@mui/system";
 import { Button } from "@mui/material";
 import useAuth from "../../hook/useAuth";
+import { Link } from "react-router-dom";
+// import Payments from "./Payments";
 
 const Img = styled("img")({
   margin: "auto",
@@ -17,10 +19,11 @@ const Img = styled("img")({
 });
 
 const MyOrders = () => {
+
   const { user } = useAuth();
   const [myOrders, setMyOrders] = useState();
   // const { data } = useData();
-  
+
   // const [order, setOrder] = useState();
   console.log(myOrders, user.email);
 
@@ -70,7 +73,6 @@ const MyOrders = () => {
                   <Img alt="complex" src={item.productImg} />
                 ))} */}
                 <Img alt="complex" src={item.productImg} />
-                
               </ButtonBase>
             </Grid>
             <Grid item xs={12} sm container>
@@ -89,7 +91,8 @@ const MyOrders = () => {
                     variant="body1"
                     gutterBottom
                   >
-                    <span className="text-danger">Product Name: </span> {item?.productName}
+                    <span className="text-danger">Product Name: </span>{" "}
+                    {item?.productName}
                   </Typography>
                   <Typography
                     sx={{ fontWeight: 700 }}
@@ -103,7 +106,7 @@ const MyOrders = () => {
                     variant="body2"
                     color="red"
                   >
-                   Status:  {item?.status}
+                    Status: {item?.status}
                   </Typography>
                   <Typography
                     sx={{ fontWeight: 700 }}
@@ -115,10 +118,13 @@ const MyOrders = () => {
                 </Grid>
                 <Grid item>
                   <Typography sx={{ cursor: "pointer" }} variant="body2">
-                    <Button variant="contained"> Confirm order</Button>
+                    <Link to="/payments">
+                      
+                      <Button variant="contained"> Confirm order</Button>{" "}
+                    </Link>
+
                     <Button
                       onClick={() => handleDelete(item._id)}
-                      
                       sx={{ m: 1 }}
                       variant="contained"
                     >
@@ -138,6 +144,7 @@ const MyOrders = () => {
               </Grid>
             </Grid>
           </Grid>
+         
         </Box>
       ))}
     </Paper>

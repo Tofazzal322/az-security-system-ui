@@ -31,7 +31,7 @@ const AddProducts = () => {
   };
   return (
       <div className="px-3 mb-5 ">
-          <h3 className="mb-3 ms-5"> New Products Add to Database </h3>
+          <h3 className="mb-3 product-title w-50 ms-5"> New Products Add to Database </h3>
       <Row className="align-center container">
         <Col className=" booking-form  px-3 mb-5" xs={12} md={6}>
           <form className="mb-4" onSubmit={handleSubmit(onSubmit)}>
