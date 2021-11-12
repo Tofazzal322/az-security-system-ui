@@ -17,7 +17,7 @@ const DashboardHome = () => {
           </Grid>
           <Grid sx={{ pe: 8 }} item xs={12} md={8}>
           <Typography sx={{ color: 'blue', fontWeight: 600 }}> PRODUCTS  </Typography>
-          <MyOrders></MyOrders>
+          {/* <MyOrders></MyOrders> */}
             
           </Grid>
         </Grid>

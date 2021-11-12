@@ -26,8 +26,12 @@ import Reviews from "../Home/Reviews";
 import Review from "./Review";
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import AddCircleIcon from '@mui/icons-material/AddCircle';
-import EnhancedEncryptionIcon from '@mui/icons-material/EnhancedEncryption';
+
+import EnhancedEncryptionIcon from "@mui/icons-material/EnhancedEncryption";
+import UpdateOrders from "./UpdateOrders";
+import PaymentIcon from "@mui/icons-material/Payment";
+import RateReviewIcon from "@mui/icons-material/RateReview";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
 
 const drawerWidth = 230;
 
@@ -55,8 +59,10 @@ const Dashboard = (props) => {
         }}
       >
         <Link style={{ color: "white", textDecoration: "none" }} to={`${url}`}>
-          
-          <Button color="inherit"> <DashboardIcon />  Dashboard</Button>
+          <Button color="inherit">
+            {" "}
+            <DashboardIcon sx={{ mr: 1 }} /> Dashboard
+          </Button>
         </Link>
         {!admin && (
           <Box>
@@ -64,8 +70,10 @@ const Dashboard = (props) => {
               style={{ color: "white", textDecoration: "none" }}
               to={`${url}/myOrders`}
             >
-              
-              <Button color="inherit"> My Orders </Button>
+              <Button color="inherit">
+                {" "}
+                <AccountBoxIcon sx={{ mr: 1 }} /> My Orders{" "}
+              </Button>
             </Link>
 
             <br />
@@ -76,8 +84,10 @@ const Dashboard = (props) => {
               }}
               to={`${url}/payments`}
             >
-              
-              <Button color="inherit"> Payment </Button>
+              <Button color="inherit">
+                {" "}
+                <PaymentIcon sx={{ mr: 1 }} /> Payment{" "}
+              </Button>
             </Link>
 
             <br />
@@ -85,8 +95,10 @@ const Dashboard = (props) => {
               style={{ color: "white", textDecoration: "none" }}
               to={`${url}/review`}
             >
-              
-              <Button color="inherit"> Reviews </Button>
+              <Button color="inherit">
+                {" "}
+                <RateReviewIcon sx={{ mr: 1 }} /> Reviews{" "}
+              </Button>
             </Link>
           </Box>
         )}
@@ -97,29 +109,38 @@ const Dashboard = (props) => {
               style={{ color: "white", textDecoration: "none" }}
               to={`${url}/allOrders`}
             >
-              
-              <Button color="inherit"> <StorageIcon/> Manage All Orders</Button>
+              <Button color="inherit">
+                {" "}
+                <StorageIcon sx={{ mr: 1 }} /> Manage All Orders
+              </Button>
             </Link>
             <Link
               style={{ color: "white", textDecoration: "none" }}
               to={`${url}/allProducts`}
             >
-              <Button color="inherit"> <StorageIcon/> Manage All Products</Button>
+              <Button color="inherit">
+                {" "}
+                <StorageIcon sx={{ mr: 1 }} /> Manage All Products
+              </Button>
             </Link>
             <Link
               style={{ color: "white", textDecoration: "none" }}
               to={`${url}/addProducts`}
             >
-              
-              <Button color="inherit"> <PostAddIcon/> {' '} Add A Products</Button>
+              <Button color="inherit">
+                {" "}
+                <PostAddIcon sx={{ mr: 1 }} /> Add A Products
+              </Button>
             </Link>
-             <br/>
+            <br />
             <Link
               style={{ color: "white", textDecoration: "none" }}
               to={`${url}/makeAdmin`}
             >
-              
-              <Button color="inherit"> <EnhancedEncryptionIcon/>  Make Admin</Button>
+              <Button color="inherit">
+                {" "}
+                <EnhancedEncryptionIcon sx={{ mr: 1 }} /> Make Admin
+              </Button>
             </Link>
           </Box>
         )}
@@ -127,9 +148,8 @@ const Dashboard = (props) => {
           style={{ color: "white", textDecoration: "none", display: "block" }}
           to={`${url}`}
         >
-          
           <Button onClick={logOut} color="inherit">
-            <ExitToAppIcon/>
+            <ExitToAppIcon sx={{ mr: 1 }} />
             LogOut
           </Button>
         </Link>
@@ -194,9 +214,12 @@ const Dashboard = (props) => {
           <Route exact path={path}>
             <DashboardHome></DashboardHome>
           </Route>
-          <Route exact path={`${path}/myOrders`}>
+          <Route path={`${path}/myOrders`}>
             <MyOrders></MyOrders>
           </Route>
+          {/* <Route exact path={`${path}/updateOrders/bookId`}>
+            <UpdateOrders></UpdateOrders>
+          </Route> */}
           <Route exact path={`${path}/payments`}>
             <Payments></Payments>
           </Route>
@@ -206,6 +229,9 @@ const Dashboard = (props) => {
           <AdminRoute path={`${path}/allOrders`}>
             <AllOrders></AllOrders>
           </AdminRoute>
+          {/* <AdminRoute exact path={`${path}/updateOrders/:bookId`}>
+            <UpdateOrders></UpdateOrders>
+          </AdminRoute> */}
           <AdminRoute path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
           </AdminRoute>

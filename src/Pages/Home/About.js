@@ -13,7 +13,7 @@ const Img = styled("img")({
 
 const About = () => {
   return (
-    <Box sx={{ m: 3, p: 3 }}>
+    <Box sx={{ m: 3, p: 3 ,my:10 }}>
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}

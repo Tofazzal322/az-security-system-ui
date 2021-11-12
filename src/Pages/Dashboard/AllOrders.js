@@ -1,5 +1,7 @@
+import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
-import { Spinner } from 'react-bootstrap';
+import { Col, Row, Spinner } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const AllOrders = () => {
 const [allOrders, setAllOrders] = useState([]);
@@ -21,9 +23,40 @@ const [allOrders, setAllOrders] = useState([]);
   }, []);
 ///////////////////////////////////////////////////////////////////////
     
+  // /////////////Delete orders  option////////////////
+
+  const handleDelete = (id) => {
+    const url = `http://localhost:5000/orders/${id}`;
+    fetch(url, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+
+        if (data.deleteCount !== 1) {
+          alert(" Are you sure want to delete the items?");
+          const remaining = allOrders.filter((orders) => orders._id !== id);
+          setAllOrders(remaining);
+          alert("Successfully deleted one document.");
+        } else {
+          alert("No documents matched the query. Deleted 0 documents.");
+        }
+      });
+  };
+  /////////////////////////////////////////////////////
+
     return (
         <div>
-            <h1> All Orders Here {allOrders.length} </h1>
+        <h1> All Orders Here {allOrders.length} </h1>
+        {
+          allOrders.map(item => <Row>
+            <Col>
+              <Link to={`/updateOrders/${item._id}`}> Update </Link>
+            </Col>
+            <Col><Button onClick={()=> handleDelete(item._id)}> Delete </Button> </Col>
+          </Row>)
+        }
         </div>
     );
 };

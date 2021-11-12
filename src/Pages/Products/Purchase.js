@@ -119,22 +119,32 @@ const Purchase = () => {
                 />
               </Col>
               <Col>
-                <h5>Address *</h5>
+                <h5>Status *</h5>
                 <input
+                  type="text"
                   className="w-100 h-75"
-                  placeholder="Address"
-                  {...register("Address")}
+                  defaultValue={products?.status}
+                  {...register("status")}
                 />
-              </Col>
-            </Row>
-            <Row className="mt-4">
-              <Col>
+                </Col>
+                <Col>
                 <h5>Date *</h5>
                 <input
                   type="date"
                   placeholder="Date"
                   className="w-100 h-75"
                   {...register("date")}
+                />
+              </Col>
+              
+            </Row>
+            <Row className="mt-4">
+              <Col>
+                <h5>Address *</h5>
+                <input
+                  className="w-100 h-75"
+                  placeholder="Address"
+                  {...register("Address")}
                 />
               </Col>
               <Col>

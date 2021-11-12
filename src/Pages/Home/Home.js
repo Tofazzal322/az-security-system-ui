@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import Products from "./Products";
+import Products from "../Products/Products";
 import Footer from "../Shared/Footer";
 import About from "./About";
 import Banner from "./Banner";

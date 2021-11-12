@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import ButtonBase from "@mui/material/ButtonBase";
-import useData from "../../hook/useData";
+// import useData from "../../hook/useData";
 import { Box } from "@mui/system";
 import { Button } from "@mui/material";
 import useAuth from "../../hook/useAuth";
@@ -17,19 +17,20 @@ const Img = styled("img")({
 });
 
 const MyOrders = () => {
-  const [myOrders, setMyOrders] = useState([]);
-  const { data } = useData();
   const { user } = useAuth();
-  const [order, setOrder] = useState();
-  console.log(order, user.email);
+  const [myOrders, setMyOrders] = useState();
+  // const { data } = useData();
+  
+  // const [order, setOrder] = useState();
+  console.log(myOrders, user.email);
 
   useEffect(() => {
     // const url = `http://localhost:5000/products?email=${user.email}&date=${date}`;
     const url = `http://localhost:5000/orders?email=${user.email}`;
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setOrder(data));
-  }, [user.email]);
+      .then((data) => setMyOrders(data));
+  }, []);
 
   // /////////////Delete orders  option////////////////
 
@@ -44,7 +45,7 @@ const MyOrders = () => {
 
         if (data.deleteCount !== 1) {
           alert(" Are you sure want to delete the items?");
-          const remaining = myOrders.filter((booking) => booking._id !== id);
+          const remaining = myOrders.filter((orders) => orders._id !== id);
           setMyOrders(remaining);
           alert("Successfully deleted one document.");
         } else {
@@ -56,7 +57,7 @@ const MyOrders = () => {
 
   return (
     <Paper sx={{ p: 2, margin: "auto", maxWidth: 500, flexGrow: 1 }}>
-      {order?.map((item) => (
+      {myOrders?.map((item) => (
         <Box>
           <Grid
             sx={{ mt: 2, p: 2, border: "1px solid gray" }}
@@ -69,6 +70,7 @@ const MyOrders = () => {
                   <Img alt="complex" src={item.productImg} />
                 ))} */}
                 <Img alt="complex" src={item.productImg} />
+                
               </ButtonBase>
             </Grid>
             <Grid item xs={12} sm container>
@@ -83,11 +85,11 @@ const MyOrders = () => {
                     {item.name}
                   </Typography>
                   <Typography
-                    sx={{ color: "red", fontWeight: 400 }}
-                    variant="body2"
+                    sx={{ color: "dark", fontWeight: 700 }}
+                    variant="body1"
                     gutterBottom
                   >
-                    {item?.productName}
+                    <span className="text-danger">Product Name: </span> {item?.productName}
                   </Typography>
                   <Typography
                     sx={{ fontWeight: 700 }}
@@ -95,6 +97,13 @@ const MyOrders = () => {
                     color="#000066"
                   >
                     Product ID: {item.productId}
+                  </Typography>
+                  <Typography
+                    sx={{ fontWeight: 700 }}
+                    variant="body2"
+                    color="red"
+                  >
+                   Status:  {item?.status}
                   </Typography>
                   <Typography
                     sx={{ fontWeight: 700 }}
@@ -108,7 +117,8 @@ const MyOrders = () => {
                   <Typography sx={{ cursor: "pointer" }} variant="body2">
                     <Button variant="contained"> Confirm order</Button>
                     <Button
-                      onClick={handleDelete}
+                      onClick={() => handleDelete(item._id)}
+                      
                       sx={{ m: 1 }}
                       variant="contained"
                     >

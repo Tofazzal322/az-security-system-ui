@@ -8,11 +8,13 @@ import Login from "./Pages/Login/Login";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import PrivateRoute from "./Pages/Login/PrivateRoute";
 import Explore from "./Pages/Products/Explore";
-import Products from "./Pages/Home/Products";
+import Products from "./Pages/Products/Products";
 import NotFound from "./Pages/Shared/NotFound";
 import Purchase from "./Pages/Products/Purchase";
 import MenuBar from "./Pages/Shared/MenuBar";
 import '../src/Pages/Style/Style.css'
+import UpdateOrders from "./Pages/Dashboard/UpdateOrders";
+import ContactUs from "./Pages/Contact/ContactUs";
 
 function App() {
   return (
@@ -33,8 +35,14 @@ function App() {
           <Route  path="/products">
             <Products></Products>
           </Route>
+          <Route  path="/contactUs">
+            <ContactUs></ContactUs>
+          </Route>
           <PrivateRoute  path="/purchase/:productId">
             <Purchase></Purchase>
+          </PrivateRoute>
+          <PrivateRoute  path="/updateOrders/:ordersId">
+            <UpdateOrders></UpdateOrders>
           </PrivateRoute>
           <PrivateRoute  path="/dashboard">
             <Dashboard></Dashboard>

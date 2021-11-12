@@ -14,7 +14,7 @@ const Reviews = () => {
   }, []);
 
   return (
-      <Box sx={{ border: "1px solid blue", mx:1, my:2, p:2}}>
+      <Box sx={{ border: "1px solid blue ", mx:1, my:10, p:2}}>
       <Grid container sx={{ justifyContent: "center" }}>
         <Grid sx={{ textAlign: "center" }}>
           <Typography sx={{ color: "#0000ff" }} variant="h4">
@@ -41,9 +41,9 @@ const Reviews = () => {
           </Typography>
         </Grid>
       </Grid>
-      <Grid sx={{ display: "flex" }}>
+      <Grid container spacing={2} sx={{ display: "flex" }}>
         {reviews.map((item) => (
-          <Grid key={item._id}>
+          <Grid item xs={12} md={4} lg={3} key={item._id}>
             <Box
               sx={{
                 display: "flex",

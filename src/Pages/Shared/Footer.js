@@ -7,6 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import PinterestIcon from '@mui/icons-material/Pinterest';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -80,7 +81,7 @@ const Footer = () => {
                 gutterBottom
               >
                 {" "}
-                Contact Us
+                <Link to="/contactUs"> Contact Us</Link>
               </Typography>
             </Box>
           </Grid>

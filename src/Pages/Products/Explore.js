@@ -2,10 +2,12 @@ import React from "react";
 import { Button, Card, Col, Image, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useData from "../../hook/useData";
+import Footer from "../Shared/Footer";
 
 const Explore = () => {
   const { data } = useData();
   return (
+    <div>
     <Row xs={1} md={2} lg={4} className="m-5 g-4">
       {data.map((product, idx) => (
         <Col className="mb-2"  key={product._id}>
@@ -27,6 +29,9 @@ const Explore = () => {
         </Col>
       ))}
     </Row>
+    
+    <Footer></Footer>
+    </div>
   );
 };
 

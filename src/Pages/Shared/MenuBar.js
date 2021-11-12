@@ -4,6 +4,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import useAuth from "../../hook/useAuth";
+import HomeIcon from "@mui/icons-material/Home";
 
 const MenuBar = () => {
   const { user, logOut } = useAuth();
@@ -27,9 +28,9 @@ const MenuBar = () => {
             <Nav.Link
               as={HashLink}
               className="nav-items text-light"
-              to="/home#products"
+              to="/home#banner"
             >
-              Home
+             <HomeIcon/> Home
             </Nav.Link>
 
             <Nav.Link
@@ -59,7 +60,7 @@ const MenuBar = () => {
                     Dashboard
                   </Nav.Link>
                   <Button
-                    className=" btn btn-dark "
+                    className=" nav-items-btn text-dark "
                     onClick={logOut}
                     variant="button"
                   >
@@ -73,9 +74,9 @@ const MenuBar = () => {
                   </Navbar.Text>
                 </div>
               ) : (
-                <Button className=" btn btn-dark" variant="button ">
+                <Button className="btn" variant="button ">
                   {" "}
-                  <Link className="nav-items-btn text-light" to="/login">
+                  <Link className="nav-items-btn" to="/login">
                     Login
                   </Link>
                 </Button>
