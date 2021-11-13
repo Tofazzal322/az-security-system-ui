@@ -1,10 +1,11 @@
-import { Container, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
+import { Container, Typography, TextField, CircularProgress, Alert } from '@mui/material';
 import React, { useState } from 'react';
 import { Grid } from '@mui/material';
 import { NavLink,useHistory} from 'react-router-dom';
 import useAuth from '../../hook/useAuth';
 import { Box } from "@mui/system";
 import Footer from "../Shared/Footer";
+import Button from "@restart/ui/esm/Button";
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
@@ -31,84 +32,85 @@ const Register = () => {
       <Container sx={{ mb: 8 }}>
         <Grid container spacing={2}>
           <Grid
-            className="input-field  py-5"
+            className="input-field   py-5"
             item
             sx={{ mt: 8 }}
             xs={12}
             md={6}
           >
-            <Typography
-              className="product-title w-75"
-              sx={{ fontWeight: 700 }}
-              variant="h4"
-              gutterBottom
-            >
-              Create User{" "}
-            </Typography>
-            {!isLoading && (
-              <form onSubmit={handleLoginSubmit}>
-                <TextField
-                  sx={{ width: "75%", m: 1 }}
-                  id="standard-basic"
-                  label="Your Name"
-                  name="name"
-                  onBlur={handleOnBlur}
-                  variant="standard"
-                />
-                <TextField
-                  sx={{ width: "75%", m: 1 }}
-                  id="standard-basic"
-                  label="Your Email"
-                  name="email"
-                  type="email"
-                  onBlur={handleOnBlur}
-                  variant="standard"
-                />
-                <TextField
-                  sx={{ width: "75%", m: 1 }}
-                  id="standard-basic"
-                  label="Your Password"
-                  type="password"
-                  name="password"
-                  onBlur={handleOnBlur}
-                  variant="standard"
-                />
-                <TextField
-                  sx={{ width: "75%", m: 1 }}
-                  id="standard-basic"
-                  label="ReType Your Password"
-                  type="password"
-                  name="password2"
-                  onBlur={handleOnBlur}
-                  variant="standard"
-                />
+            <Box className="register-form ms-5 ps-5">
+              <Typography
+                className="product-title w-75"
+                sx={{ fontWeight: 700 }}
+                variant="h4"
+                gutterBottom
+              >
+                Register{" "}
+              </Typography>
+              {!isLoading && (
+                <form onSubmit={handleLoginSubmit}>
+                  <TextField
+                    sx={{ width: "75%", m: 1 }}
+                    id="standard-basic"
+                    label="Your Name"
+                    name="name"
+                    onBlur={handleOnBlur}
+                    variant="standard"
+                  />
+                  <TextField
+                    sx={{ width: "75%", m: 1 }}
+                    id="standard-basic"
+                    label="Your Email"
+                    name="email"
+                    type="email"
+                    onBlur={handleOnBlur}
+                    variant="standard"
+                  />
+                  <TextField
+                    sx={{ width: "75%", m: 1 }}
+                    id="standard-basic"
+                    label="Your Password"
+                    type="password"
+                    name="password"
+                    onBlur={handleOnBlur}
+                    variant="standard"
+                  />
+                  <TextField
+                    sx={{ width: "75%", m: 1 }}
+                    id="standard-basic"
+                    label="ReType Your Password"
+                    type="password"
+                    name="password2"
+                    onBlur={handleOnBlur}
+                    variant="standard"
+                  />
 
-                <Button
-                  sx={{ width: "75%", m: 1 }}
-                  type="submit"
-                  variant="contained"
-                >
-                  Register
-                </Button>
-                <NavLink style={{ textDecoration: "none" }} to="/login">
-                  <Button variant="text">
-                    Already Registered? Please Login
+                  <Button
+                    className="register-toggle-btn mt-2 d-block w-75"
+                    sx={{ width: "75%", m: 1 }}
+                    type="submit"
+                    variant="contained"
+                  >
+                    Register
                   </Button>
-                </NavLink>
-              </form>
-            )}
-            {isLoading && <CircularProgress />}
-            {user?.email && (
-              <Alert severity="success">User Created successfully!</Alert>
-            )}
-            {authError && <Alert severity="error">{authError}</Alert>}
+                  <NavLink style={{ textDecoration: "none" }} to="/login">
+                    <Button className="register-toggle-btn w-75" variant="text">
+                      Already Registered? Please Login
+                    </Button>
+                  </NavLink>
+                </form>
+              )}
+              {isLoading && <CircularProgress />}
+              {user?.email && (
+                <Alert severity="success">User Created successfully!</Alert>
+              )}
+              {authError && <Alert severity="error">{authError}</Alert>}
+            </Box>
           </Grid>
           <Grid item xs={12} md={6}>
-           
             <img
               style={{ width: "100%", p: 10 }}
               src="https://image.shutterstock.com/image-vector/man-key-near-computer-account-260nw-1499141258.jpg"
-              
               alt=""
             />
           </Grid>

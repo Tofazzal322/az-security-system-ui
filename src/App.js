@@ -26,34 +26,34 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route  path="/home">
+          <Route path="/home">
             <Home></Home>
           </Route>
-          <Route  path="/explore">
+          <Route path="/explore">
             <Explore></Explore>
           </Route>
-          <Route  path="/reviews">
+          <Route path="/reviews">
             <Reviews></Reviews>
           </Route>
-          <Route  path="/products">
+          <Route path="/products">
             <Products></Products>
           </Route>
-          <Route  path="/updateOrders">
+          <Route path="/updateOrders">
             <UpdateOrders></UpdateOrders>
           </Route>
-          <Route  path="/contactUs">
+          <Route path="/contactUs">
             <ContactUs></ContactUs>
           </Route>
-          <Route  path="/payments">
+          <Route path="/payments">
             <Payments></Payments>
           </Route>
-          <PrivateRoute  path="/purchase/:productId">
+          <PrivateRoute path="/purchase/:productId">
             <Purchase></Purchase>
           </PrivateRoute>
-          <PrivateRoute  path="/updateOrders/:ordersId">
+          <PrivateRoute path="/UpdateOrders/:orderId">
             <UpdateOrders></UpdateOrders>
           </PrivateRoute>
-          <PrivateRoute  path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
           </PrivateRoute>
           <Route path="/login">

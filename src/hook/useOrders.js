@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 
-const useData = () => {
-  const [data, setData] = useState([]);
+const useOrders = () => {
+  const [order, setOrder] = useState([]);
   
-  // console.log(data);
+  console.log(order);
 
 ///////////////////////////////////////////////////////////////
-  useEffect(() => {
-    fetch("https://fathomless-shelf-34125.herokuapp.com/products")
+    useEffect(() => {
+    fetch("https://fathomless-shelf-34125.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => {
         if (!data) {
@@ -16,20 +16,21 @@ const useData = () => {
             <span className="visually-hidden">Loading...</span>;
           </Spinner>;
         } else {
-          setData(data);
+          setOrder(data);
         }
       });
   }, []);
+
 /////////////////////////////////////////////////////////////////
   
 
  
 
   return {
-    data,
-    setData,
+    order,
+    setOrder,
     
   };
 };
 
-export default useData;
+export default useOrders;

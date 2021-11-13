@@ -1,39 +1,44 @@
 import React, { useEffect, useState } from "react";
-import { Col,  Row, Spinner } from "react-bootstrap";
+import { Col, Row, Spinner } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useHistory, useLocation, useParams} from "react-router";
+import { useHistory, useLocation, useParams } from "react-router";
+// import useData from "../../hook/useData";
+// import useOrders from "../../hook/useOrders"
 import Footer from "../Shared/Footer";
 
 const UpdateOrders = () => {
   const { register, handleSubmit, reset } = useForm();
-  const { ordersId } = useParams();
+  const { orderId } = useParams();
+  // console.log(orderId);
   const [manageOrders, setManageOrders] = useState({});
   const location = useLocation();
   const history = useHistory();
-  const redirect_uri = location.state?.from || "/";
-  // console.log(manageOrders);
+  // const { order } = useOrders()
 
-  useEffect(() => {
-    const url = `https://fathomless-shelf-34125.herokuapp.com/orders/${ordersId}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        if (!data) {
-          <Spinner animation="border" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>;
-        } else {
-          setManageOrders(data);
-        }
-      });
-  }, [ordersId]);
+  const redirect_uri = location.state?.from || "/dashboard";
+  console.log(manageOrders);
+
+  // useEffect(() => {
+  //   const url = `http://localhost:5000/orders/${orderId}`;
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if (!data) {
+  //         <Spinner animation="border" role="status">
+  //           <span className="visually-hidden">Loading...</span>
+  //         </Spinner>;
+  //       } else {
+  //         setManageOrders(data);
+  //       }
+  //     });
+  // }, [orderId]);
 
   const onSubmit = (data) => {
-    const url = `https://fathomless-shelf-34125.herokuapp.com/orders/${ordersId}`;
+    const url = `https://fathomless-shelf-34125.herokuapp.com/${orderId}`;
     fetch(url, {
       method: "PUT",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     })
@@ -51,15 +56,15 @@ const UpdateOrders = () => {
       });
   };
 
-  
   return (
     <div>
       <div className="px-3 container">
-        <h2 className="text-center mt-2 product-title ">UPDATE ALL ORDERS</h2>
+        <h2 className="text-center mt-2 product-title ">UPDATE ALL ORDERS </h2>
         <Row className="mt-5 ">
+          {orderId}
           <Col className="pe-5" xs={12} md={6}>
-            <h2> {manageOrders.productId} </h2>
-            <h2> {manageOrders.productName} </h2>
+            <h2> {manageOrders?.productId} </h2>
+            <h2> {manageOrders?.productName} </h2>
           </Col>
 
           <Col className=" booking-form  px-3 mb-5" xs={12} md={6}>
@@ -112,6 +117,7 @@ const UpdateOrders = () => {
                   <h5>Status *</h5>
                   <input
                     className="w-100 h-75"
+                    // placeholder="Status"
                     defaultValue={manageOrders?.status}
                     {...register("status")}
                   />

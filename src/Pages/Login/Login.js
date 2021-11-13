@@ -49,8 +49,8 @@ const Login = () => {
   
   return (
     <Box>
-      <Container >
-        <Grid  container spacing={2}>
+      <Container>
+        <Grid container spacing={2}>
           <Grid
             className="review-form mb-5 pt-3 "
             item
@@ -58,17 +58,11 @@ const Login = () => {
             xs={12}
             md={6}
           >
-            <Typography
-              className="product-title"
-              
-              variant="h4"
-              gutterBottom
-            >
+            <Typography className="product-title" variant="h4" gutterBottom>
               Please Login
             </Typography>
-            <form  onSubmit={handleLoginSubmit}>
+            <form onSubmit={handleLoginSubmit}>
               <TextField
-                
                 sx={{ width: "98%", m: 1 }}
                 id="standard-basic"
                 label="Your Email"
@@ -98,10 +92,9 @@ const Login = () => {
               </Form.Group>
 
               <Button
-                className="login-btn  text-light mb-4 mt-2"
+                className="register-toggle-btn mb-3 mt-3 w-100"
                 variant="primary"
                 type="submit"
-
               >
                 Login
               </Button>
@@ -114,7 +107,8 @@ const Login = () => {
             </form>
 
             <Button
-              className="btn btn-danger w-100"
+              // variant="outline"
+              className="google-btn w-100"
               onClick={handleGoogleSignIn}
             >
               Sign in with google
@@ -122,7 +116,8 @@ const Login = () => {
 
             <NavLink style={{ textDecoration: "none" }} to="/register">
               <Button
-                className="border btn btn-outline-dark fw-bold toggle-btn"
+                // className="border btn btn-outline-dark fw-bold toggle-btn"
+                className="register-toggle-btn mt-3 w-100"
                 variant="text"
               >
                 New User? Please Register
@@ -133,7 +128,6 @@ const Login = () => {
             <img
               style={{ width: "100%", p: 10 }}
               src="https://image.shutterstock.com/image-vector/man-key-near-computer-account-260nw-1499141258.jpg"
-              // src="https://static3.depositphotos.com/1005574/198/v/950/depositphotos_1982796-stock-illustration-login-icon-button.jpg"
               alt=""
             />
           </Grid>
