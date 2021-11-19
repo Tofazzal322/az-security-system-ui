@@ -10,6 +10,7 @@ import { Button } from "@mui/material";
 import useAuth from "../../hook/useAuth";
 import { Link } from "react-router-dom";
 // import Payments from "./Payments";
+import useData from '../../hook/useData'
 
 const Img = styled("img")({
   margin: "auto",
@@ -22,7 +23,7 @@ const MyOrders = () => {
 
   const { user } = useAuth();
   const [myOrders, setMyOrders] = useState();
-  // const { data } = useData();
+  const { data } = useData();
 
   // const [order, setOrder] = useState();
   console.log(myOrders, user.email);
@@ -69,9 +70,7 @@ const MyOrders = () => {
           >
             <Grid item>
               <ButtonBase sx={{ width: 128, height: 128 }}>
-                {/* {data.filter(item === item.productId).map((item) => (
-                  <Img alt="complex" src={item.productImg} />
-                ))} */}
+               
                 <Img alt="complex" src={item.productImg} />
               </ButtonBase>
             </Grid>

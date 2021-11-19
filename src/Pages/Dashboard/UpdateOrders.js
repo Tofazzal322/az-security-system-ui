@@ -27,7 +27,7 @@ const UpdateOrders = () => {
  
 
   useEffect(() => {
-    // const url = `http://localhost:5000/orders/${updateOrder}`;
+  
     const url = `https://fathomless-shelf-34125.herokuapp.com/orders/${updateOrder}`;
     fetch(url)
       .then((res) => res.json())
