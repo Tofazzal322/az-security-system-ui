@@ -118,12 +118,13 @@ const MyOrders = () => {
                 </Grid>
                 <Grid item>
                   <Typography sx={{ cursor: "pointer" }} variant="body2">
-                    <Link to="/payments">
-                      
-                      <Button variant="contained"> Confirm order</Button>{" "}
+                    
+                    <Link to={`/dashboard/payments/${item._id}`}>
+                      <Button className="payNow-btn ms-2" variant="contained"> Confirm order</Button>{" "}
                     </Link>
 
                     <Button
+                      className="payNow-btn"
                       onClick={() => handleDelete(item._id)}
                       sx={{ m: 1 }}
                       variant="contained"

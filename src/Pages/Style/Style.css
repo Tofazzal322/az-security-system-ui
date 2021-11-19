@@ -209,3 +209,32 @@
      border-radius: 5px;
      
 }
+
+.private-route-spinner{
+    text-align: center;
+    font-size: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-form{
+    width: 50%;
+    margin-top: -20px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;
+    padding: 5px;
+    justify-self: center;
+}
+
+.payNow-btn{
+     width: 100%;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color:#ff4d4d;
+    
+}

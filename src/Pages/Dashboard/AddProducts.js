@@ -34,6 +34,7 @@ const AddProducts = () => {
               <Col>
                 <h5>Product Name *</h5>
                 <input
+                  required
                   type="text"
                   className="w-100 h-75"
                   placeholder="Products Name"
@@ -43,6 +44,7 @@ const AddProducts = () => {
               <Col>
                 <h5>Product Price *</h5>
                 <input
+                  required
                   type="number"
                   className="w-100 h-75"
                   placeholder="Products Price"
@@ -55,6 +57,7 @@ const AddProducts = () => {
               <Col>
                 <h5>Product Model *</h5>
                 <input
+                  required
                   className="w-100 h-75"
                   placeholder="Product Model"
                   {...register("model")}
@@ -63,6 +66,7 @@ const AddProducts = () => {
               <Col>
                 <h5>Default Status *</h5>
                 <input
+                  required
                   className="w-100 h-75"
                   defaultValue="Pending"
                   {...register("status")}
@@ -73,6 +77,7 @@ const AddProducts = () => {
               <Col>
                 <h5>Product ID *</h5>
                 <input
+                  required
                   type="text"
                   className="w-100 h-75"
                   placeholder="Product Id"
@@ -82,6 +87,7 @@ const AddProducts = () => {
               <Col>
                 <h5>Date *</h5>
                 <input
+                  required
                   type="date"
                   placeholder="Date"
                   className="w-100 h-75"
@@ -91,9 +97,12 @@ const AddProducts = () => {
             </Row>
             <Row className="mt-4">
               <Col>
-                <h5>Product Img URL *</h5>
+                <h5>Product Img *</h5>
                 <input
+                  accept="image/*"
+                  required
                   className="w-100 h-75"
+                  type="file"
                   placeholder="Product Img URL"
                   {...register("productImg")}
                 />

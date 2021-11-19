@@ -158,6 +158,16 @@ const Purchase = () => {
               </Col>
             </Row>
 
+            {/* <Row className="mt-4">
+              <Col>
+                <h5>Your Message</h5>
+                <input
+                  className="w-100 h-100"
+                  defaultValue={products?.src}
+                  {...register("message")}
+                />
+              </Col>
+            </Row> */}
             <Row className="mt-4">
               <Col>
                 <h5>Your Message</h5>

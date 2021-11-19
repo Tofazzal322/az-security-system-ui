@@ -4,7 +4,7 @@ import { Spinner } from "react-bootstrap";
 const useOrders = () => {
   const [order, setOrder] = useState([]);
   
-  console.log(order);
+  // console.log(order);
 
 ///////////////////////////////////////////////////////////////
     useEffect(() => {

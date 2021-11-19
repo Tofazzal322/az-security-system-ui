@@ -16,6 +16,7 @@ import UpdateOrders from "./Pages/Dashboard/UpdateOrders";
 import ContactUs from "./Pages/Contact/ContactUs";
 import Payments from "./Pages/Dashboard/Payments";
 import Reviews from "./Pages/Home/Reviews";
+import CheckOut from "./Pages/Dashboard/CheckOut";
 
 function App() {
   return (
@@ -26,37 +27,37 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route path="/home">
+          <Route exact path="/home">
             <Home></Home>
           </Route>
-          <Route path="/explore">
+          <Route exact path="/explore">
             <Explore></Explore>
           </Route>
-          <Route path="/reviews">
+          <Route exact path="/reviews">
             <Reviews></Reviews>
           </Route>
-          <Route path="/products">
+          <Route exact path="/products">
             <Products></Products>
           </Route>
-          <Route path="/updateOrders">
+          {/* <Route exact path="/updateOrders">
             <UpdateOrders></UpdateOrders>
-          </Route>
+          </Route> */}
           <Route path="/contactUs">
             <ContactUs></ContactUs>
           </Route>
-          <Route path="/payments">
-            <Payments></Payments>
+          <Route exact path="/checkOut">
+            <CheckOut></CheckOut>
           </Route>
-          <PrivateRoute path="/purchase/:productId">
+          <PrivateRoute exact path="/purchase/:productId">
             <Purchase></Purchase>
           </PrivateRoute>
-          <PrivateRoute path="/UpdateOrders/:orderId">
+          <Route exact path="/updateOrders/:updateOrder/:id2">
             <UpdateOrders></UpdateOrders>
-          </PrivateRoute>
-          <PrivateRoute path="/dashboard">
+          </Route>
+          <PrivateRoute  path="/dashboard">
             <Dashboard></Dashboard>
           </PrivateRoute>
-          <Route path="/login">
+          <Route  path="/login">
             <Login></Login>
           </Route>
           <Route path="/register">

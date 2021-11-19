@@ -32,7 +32,7 @@ const AllOrders = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
 
         if (data.deleteCount !== 1) {
           alert(" Are you sure want to delete the items?");
@@ -91,7 +91,8 @@ const AllOrders = () => {
             </Col>
             <Col md={3}>
               <div className="action-btn">
-                <Link to={`/UpdateOrders/${item._id}`}>
+                
+                <Link to={`/updateOrders/${item._id}/${item.productId}`}>
                   <Button className="purchase-btn"> Update </Button>{" "}
                 </Link>
 
@@ -101,6 +102,7 @@ const AllOrders = () => {
                 >
                   Cancel{" "}
                 </Button>
+           
               </div>
             </Col>
           </Row>

@@ -25,6 +25,8 @@ import PaymentIcon from "@mui/icons-material/Payment";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import AdminDashboard from "./AdminDashboard";
+import UpdateOrders from "./UpdateOrders";
+// import UpdateOrders from "./UpdateOrders";
 
 const drawerWidth = 230;
 
@@ -222,7 +224,10 @@ const Dashboard = (props) => {
           <Route exact path={`${path}/adminDashboard`}>
             <AdminDashboard></AdminDashboard>
           </Route>
-          <Route exact path={`${path}/payments`}>
+          {/* <Route  path={`${path}/updateOrders/:updateOrder/:id2`}>
+            <UpdateOrders></UpdateOrders>
+          </Route> */}
+          <Route  path={`${path}/payments/:payId`}>
             <Payments></Payments>
           </Route>
           <Route exact path={`${path}/review`}>
@@ -231,9 +236,7 @@ const Dashboard = (props) => {
           <AdminRoute path={`${path}/allOrders`}>
             <AllOrders></AllOrders>
           </AdminRoute>
-          {/* <AdminRoute exact path={`${path}/updateOrders/:bookId`}>
-            <UpdateOrders></UpdateOrders>
-          </AdminRoute> */}
+          
           <AdminRoute path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
           </AdminRoute>
