@@ -4,7 +4,7 @@ import { Spinner } from "react-bootstrap";
 const useData = () => {
   const [data, setData] = useState([]);
   
-  // console.log(data);
+  console.log(data);
 
 ///////////////////////////////////////////////////////////////
   useEffect(() => {

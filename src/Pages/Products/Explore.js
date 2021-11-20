@@ -6,6 +6,7 @@ import Footer from "../Shared/Footer";
 
 const Explore = () => {
   const { data } = useData();
+
   return (
     <div>
       
@@ -15,7 +16,9 @@ const Explore = () => {
       {data?.map((product, idx) => (
         <Col className="mb-2"  key={product._id}>
           <Card className="explore-card mb-2">
-            <Image className="explore-img " variant="top"  src={product.productImg} />
+            {
+              product.imageAdd ? <Image className="explore-img " variant="top" src={`data:image/jpeg;base64,${product.imageAdd}`} /> : <Image className="explore-img " variant="top" src={product.productImg} />
+            }
             <Card.Body>
               <Card.Title className="text-primary"> <span className="product-name">{product.name}</span> </Card.Title>
                       <Card.Text>{product.description.slice(0, 120)}</Card.Text>

@@ -5,15 +5,33 @@ import { useForm } from "react-hook-form";
 const AddProducts = () => {
   const [status, setStatus] = useState(false);
   const { register, handleSubmit, reset } = useForm();
+  const [imageAdd, setImageAdd] = useState(null);
 
   const onSubmit = (data) => {
+    if (!imageAdd) {
+      return alert(" Please Add an image");
+    }
+
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("price", data.price);
+    formData.append("model", data.model);
+    formData.append("status", data.status);
+    formData.append("productId", data.productId);
+    formData.append("date", data.date);
+    formData.append("description", data.description);
+    formData.append("imageAdd", imageAdd);
+
     fetch("https://fathomless-shelf-34125.herokuapp.com/products", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: formData,
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then((result) => {
+        if (result.insertedId) {
+          console.log("Successfully added Products");
+        }
+        
         setStatus(!status);
         alert("Successfully Added A Product into database....  ");
         reset();
@@ -21,11 +39,28 @@ const AddProducts = () => {
       .catch((err) => console.log(err));
   };
 
+  // const onSubmit = (data) => {
+
+  //   fetch("http://localhost:5000/products", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(data),
+
+  //   })
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       console.log("Success", result);
+  //       setStatus(!status);
+  //       alert("Successfully Added A Product into database....  ");
+  //       reset();
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+
   return (
     <div className="px-3 mb-5 ">
       <h3 className="mb-3 product-title w-50 ms-5">
-        {" "}
-        New Products Add to Database{" "}
+        New Products Add to Database
       </h3>
       <Row className="align-center container">
         <Col className=" booking-form  px-3 mb-5" xs={12} md={6}>
@@ -103,8 +138,9 @@ const AddProducts = () => {
                   required
                   className="w-100 h-75"
                   type="file"
-                  placeholder="Product Img URL"
-                  {...register("productImg")}
+                  onChange={(e) => setImageAdd(e.target.files[0])}
+                  // placeholder="Product Img URL"
+                  // {...register("productImg")}
                 />
               </Col>
             </Row>
