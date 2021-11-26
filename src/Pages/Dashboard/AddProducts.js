@@ -58,85 +58,83 @@ const AddProducts = () => {
   // };
 
   return (
-    <div className="px-3 mb-5 ">
-      <h3 className="mb-3 product-title w-50 ms-5">
-        New Products Add to Database
-      </h3>
-      <Row className="align-center container">
-        <Col className=" booking-form  px-3 mb-5" xs={12} md={6}>
+    <div className="px-3 container add-products-form mb-5 ">
+      <h3 className="mb-3 mt-3 product-title ">New Products Add to Database</h3>
+      <Row xs={12} md={12}  className=" w-100">
+        {/* <Col className=" booking-form  px-3 mb-5" xs={12} md={12} > */}
           <form className="mb-4" onSubmit={handleSubmit(onSubmit)}>
-            <Row className="mb-3">
-              <Col>
+            <Row >
+              <Col className="mt-4">
                 <h5>Product Name *</h5>
                 <input
                   required
                   type="text"
-                  className="w-100 h-75"
+                  className="w-100"
                   placeholder="Products Name"
                   {...register("name")}
                 />
               </Col>
-              <Col>
+              <Col className="mt-4">
                 <h5>Product Price *</h5>
                 <input
                   required
                   type="number"
-                  className="w-100 h-75"
+                  className="w-100"
                   placeholder="Products Price"
                   {...register("price")}
                 />
               </Col>
             </Row>
 
-            <Row className="mt-4">
-              <Col>
-                <h5>Product Model *</h5>
+            <Row >
+              <Col className="mt-4">
+                <h5>Product Model*</h5>
                 <input
                   required
-                  className="w-100 h-75"
+                  className="w-100"
                   placeholder="Product Model"
                   {...register("model")}
                 />
               </Col>
-              <Col>
+              <Col className="mt-4">
                 <h5>Default Status *</h5>
                 <input
                   required
-                  className="w-100 h-75"
                   defaultValue="Pending"
+                className="w-100"
                   {...register("status")}
                 />
               </Col>
             </Row>
-            <Row className="mt-4">
-              <Col>
+            <Row >
+              <Col className="mt-4">
                 <h5>Product ID *</h5>
                 <input
                   required
                   type="text"
-                  className="w-100 h-75"
+                  className="w-100"
                   placeholder="Product Id"
                   {...register("productId")}
                 />
               </Col>
-              <Col>
+              <Col className="mt-4">
                 <h5>Date *</h5>
                 <input
                   required
                   type="date"
                   placeholder="Date"
-                  className="w-100 h-75"
+                className="w-100"
                   {...register("date")}
                 />
               </Col>
             </Row>
-            <Row className="mt-4">
-              <Col>
+            <Row >
+              <Col className="mt-4">
                 <h5>Product Img *</h5>
                 <input
+                  className="w-100"
                   accept="image/*"
                   required
-                  className="w-100 h-75"
                   type="file"
                   onChange={(e) => setImageAdd(e.target.files[0])}
                   // placeholder="Product Img URL"
@@ -149,16 +147,16 @@ const AddProducts = () => {
               <Col>
                 <h5>Description</h5>
                 <textarea
-                  className="w-100 h-100"
                   placeholder="Products Description"
+                className="w-100"
                   {...register("description")}
                 />
               </Col>
             </Row>
 
-            <input className="mt-5 bookingBtn w-100" type="submit" />
+            <input className="mt-5 bookingBtn " type="submit" />
           </form>
-        </Col>
+        {/* </Col> */}
       </Row>
     </div>
   );

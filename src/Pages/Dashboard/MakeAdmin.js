@@ -33,7 +33,7 @@ const MakeAdmin = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1 className="product-title fs-3 w-50"> Make an Admin</h1>
       <form style={{ marginTop: "50px" }} onSubmit={handleAdminSubmit}>
         <input
@@ -47,7 +47,7 @@ const MakeAdmin = () => {
           onBlur={handleOnBlur}
         />
         <Button
-          className="purchase-btn mt-3 w-50"
+          className="make-admin-btn mt-3 w-50"
           sx={{ mt: 2, ml: 2 }}
           variant="outline"
           type="submit"

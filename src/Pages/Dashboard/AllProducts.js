@@ -51,7 +51,7 @@ const AllProducts = ({ data }) => {
             <h5 className="table-data"> {item.name} </h5>
           </Col>
           <Col md={2}>
-            <h5> {item.price}</h5>
+            <h5> ${item.price}</h5>
           </Col>
           <Col md={1}>
             <h5 className="table-data">{item.productId}</h5>

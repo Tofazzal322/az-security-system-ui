@@ -10,7 +10,7 @@ const Explore = () => {
   return (
     <div>
       
-        <h2 className="container product-title mt-5 mx-5 py-3"> EXPLORE OUR NEW PRODUCTS</h2>  
+        <h2 className="container product-title mt-5  py-3"> EXPLORE OUR NEW PRODUCTS</h2>  
       
     <Row xs={1} md={2} lg={4} className="m-5 g-4">
       {data?.map((product, idx) => (

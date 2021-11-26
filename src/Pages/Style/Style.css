@@ -72,6 +72,7 @@
 
 .booking-form{
     border: 1px solid rgb(235, 231, 231);
+    width: 100%;
 
     
 }
@@ -132,6 +133,8 @@
     border-radius: 50px;
     text-align: center;
     color: #ff6666;
+    /* width: 100%; */
+    /* margin-left: -10px; */
 }
 
 .review-form{
@@ -237,4 +240,24 @@
     border-radius: 5px;
     background-color:#ff4d4d;
     
+}
+
+.add-products-form{
+    margin-top: -60px !important;
+    /* margin-left: 250px !important; */
+    /* border: 1px solid red; */
+    /* width: 50% !important; */
+}
+
+.make-admin-btn{
+    display: block;
+    margin-bottom: 10px;
+     text-decoration: none;
+     border: none;
+     font-weight: 600;
+      padding: 5px 10px;
+     background-color:#ff4d4d;
+     color: #f5f1f1;
+     border-radius: 2px;
+
 }

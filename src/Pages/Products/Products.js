@@ -1,5 +1,4 @@
 import {
-  
   Card,
   CardActionArea,
   CardActions,
@@ -27,12 +26,13 @@ const Products = () => {
       <Box sx={{ m: 10, mb: 10, mt: 5 }}>
         <Typography className="product-title"
           variant="h4"
-          sx={{alignItems: "center", m: 5 }}
+          sx={{alignItems: "center", mb: 5 }}
         >
-          {" "}
-          PRODUCTS{" "}
+         
+          PRODUCTS
         </Typography>
         <Grid
+          
           container
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
