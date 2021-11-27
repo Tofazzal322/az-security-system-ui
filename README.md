@@ -1,14 +1,22 @@
 # Welcome to Az Security System
 
-project private repo link [Az Security System ](https://github.com/programming-hero-web-course-4/niche-website-client-side-Tofazzal322).
+## Az security System Client side Link
+Project  repo link [Az Security System ](https://github.com/Tofazzal322/az-security-system-ui).
 
-## Az Security System Server Site Link 
- [Az Security System Server Site Link](https://github.com/programming-hero-web-course-4/niche-website-server-side-Tofazzal322)
-
-
+## Az Security System Server Side Link 
+ [Az Security System Server Site Link](https://github.com/Tofazzal322/az-security-system-server)
 
 ## Live site Link 
  [Live Site Link](https://az-security-system.web.app/)
+
+### Project Overview
+1. Users can explore and purchase any products. Before purchase users should log in first,
+Log in users can see orders and can cancel or confirm any order.
+2. Implemented admin system, Admin can add new products, make a new admin, confirm
+and delete any orders and admin can manage all products as well.
+3. Used MongoDB database for Data Stored and Firebase Authentication System for login.
+4. #### Technology used:
+ HTML5, CSS3, Javascript, React.js, Node.js, Express.js, React Bootstrap,Webpack, React hook form, React router dom.
 
 
  #### In This Projects Used 

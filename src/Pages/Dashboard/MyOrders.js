@@ -9,7 +9,6 @@ import { Box } from "@mui/system";
 import { Button } from "@mui/material";
 import useAuth from "../../hook/useAuth";
 import { Link } from "react-router-dom";
-// import Payments from "./Payments";
 import useData from '../../hook/useData'
 
 const Img = styled("img")({
@@ -26,7 +25,7 @@ const MyOrders = () => {
   const { data } = useData();
 
   // const [order, setOrder] = useState();
-  console.log(myOrders, user.email);
+  // console.log(myOrders, user.email);
 
   useEffect(() => {
     // const url = `https://fathomless-shelf-34125.herokuapp.com/products?email=${user.email}&date=${date}`;
