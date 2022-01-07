@@ -1,0 +1,263 @@
+#carousel-img{
+    width: "100%";
+    height:"300px" !important;
+    margin-top: 100;
+}
+
+.menu-bg{
+    /* background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); */
+    background-color:	#ff8080;
+}
+
+
+.login-btn{
+    
+    width: 100%;
+    border: none;
+    background-color:#0a0a0a ;
+    color: white;
+    font-weight: 700;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+
+.toggle-btn{
+    width: 100%;
+    margin-top: 20px;
+    background:#000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: rgb(255, 255, 255);
+}
+
+.forget-pass{
+    margin-left: 260px;
+}
+
+.explore-img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 180px;
+}
+
+.explore-card{
+    height: 420px;
+}
+.buyNow-btn{
+    border: 0 !important;
+     background-color:#ff4d4d !important;
+     color: #f5f1f1 !important;
+}
+
+.card-price{
+    margin-left: 80px;
+    font-size: 1.5rem;
+    padding: 5px 15px;
+    color: rgb(207, 17, 17);
+    font-weight: 700;
+
+}
+
+.bookingBtn{
+    border: none;
+    background-color: #006576;
+    padding: 5px 15px;
+    width: 100%;
+    color: white;
+    font-weight: 600;
+
+}
+
+.booking-form{
+    border: 1px solid rgb(235, 231, 231);
+    width: 100%;
+
+    
+}
+
+.nav-brand{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size:25px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.price-header{
+    background-color: #006576;
+    color: rgb(255, 255, 255);
+    padding-top: 1px;
+    
+}
+
+.productKey{
+    font-weight: bold;
+    color: #ecb605;
+}
+
+.nav-items-btn{
+    text-decoration: none;
+    border: none;
+    background-color:#ffe6e6;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: 900;
+}
+
+.product-name{
+    color: #ff6666;
+}
+
+.purchase-btn{
+    margin-left: 10px;
+    margin-bottom: 10px;
+     text-decoration: none;
+     border: none;
+     font-weight: 600;
+      padding: 5px 10px;
+     background-color:#ff4d4d;
+     color: #f5f1f1;
+     border-radius: 2px;
+}
+
+.product-card:hover{
+    background-color: #f5f1f1;
+    box-shadow: 5px 5px 1px 0.1px #ffe6e6;;
+    
+}
+
+.product-title{
+    border: 1px solid 	#ff8080;
+    border-radius: 50px;
+    text-align: center;
+    color: #ff6666;
+    /* width: 100%; */
+    /* margin-left: -10px; */
+}
+
+.review-form{
+    border: 1px solid 	#ff8080;
+    padding: 20px;
+    align-items: center;
+}
+
+.input-field{
+    border: 1px solid 	#ff8080;
+    padding: 7px;
+    align-items: center;
+}
+
+.product-name{
+    color: #ff6666;
+}
+
+.total-card{
+    
+    border-radius: 5px;
+    background: #000;
+    width:auto;
+    height: 150px;
+    margin: 10px;
+    color: aliceblue;
+    
+}
+
+.action-btn{
+    text-align: right;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.all-product-row{
+    border: 1px solid #ff9999;
+    /* background: #d4d2d2; */
+}
+
+.table-header{
+    padding: 10px;
+    background: #ff9999;
+    position:sticky;
+}
+
+.table-data{
+    text-align: center;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.register-toggle-btn{
+   margin-left: 10px;
+    margin-bottom: 10px;
+     text-decoration: none;
+     border: none;
+     font-weight: 600;
+      padding: 5px 10px;
+     background-color:#ff4d4d;
+     color: #f5f1f1;
+     border-radius: 5px;
+}
+
+.google-btn{
+    margin-left: 10px;
+     border: none;
+     font-weight: 700;
+      padding: 5px 10px;
+     background-color:#4de4ff59;
+     color: #ff4d4d;
+     border-radius: 5px;
+     
+}
+
+.private-route-spinner{
+    text-align: center;
+    font-size: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-form{
+    width: 50%;
+    margin-top: -20px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid red;
+    padding: 5px;
+    justify-self: center;
+}
+
+.payNow-btn{
+     width: 100%;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 7px 10px;
+    border-radius: 5px;
+    background-color:#ff4d4d;
+    
+}
+
+.add-products-form{
+    margin-top: -60px !important;
+    /* margin-left: 250px !important; */
+    /* border: 1px solid red; */
+    /* width: 50% !important; */
+}
+
+.make-admin-btn{
+    display: block;
+    margin-bottom: 10px;
+     text-decoration: none;
+     border: none;
+     font-weight: 600;
+      padding: 5px 10px;
+     background-color:#ff4d4d;
+     color: #f5f1f1;
+     border-radius: 2px;
+
+}
