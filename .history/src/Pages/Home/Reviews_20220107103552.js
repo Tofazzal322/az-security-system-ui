@@ -1,18 +1,18 @@
-import { Rating } from "@mui/material";
-// import { Box } from "@mui/system";
+import { Grid, Rating, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
-// import Paper from "@mui/material/Paper";
+import Paper from "@mui/material/Paper";
 import { Card, Carousel, Col, Row } from "react-bootstrap";
 
 const Reviews = () => {
-  // const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [value, setValue] = useState(4.3);
 
-  // useEffect(() => {
-  //   fetch("https://fathomless-shelf-34125.herokuapp.com/reviews")
-  //     .then((res) => res.json())
-  //     .then((data) => setReviews(data));
-  // }, []);
+  useEffect(() => {
+    fetch("https://fathomless-shelf-34125.herokuapp.com/reviews")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, []);
 
   const [index, setIndex] = useState(0);
 
@@ -29,19 +29,19 @@ const Reviews = () => {
   }, []);
 
   return (
-    <div className="news-bg container-fluid">
+ <div className="news-bg container-fluid">
       <h2 className="text-center  fs-1">
-        Happy Client <span className="title-1">Says</span>
+        Happy Client <span className="title-1">Says</span> 
         <br />
-        <Rating
-          name="simple-controlled"
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-        />
+          <Rating
+        name="simple-controlled"
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      />
       </h2>
-
+    
       <Carousel
         className="mt-4 carousel-container "
         activeIndex={index}
@@ -121,6 +121,7 @@ const Reviews = () => {
       </Carousel>
     </div>
 
+
     //   <Box sx={{ border: "1px solid blue ", mx:1, my:10, p:2}}>
     //   <Grid container sx={{ justifyContent: "center" }}>
     //     <Grid sx={{ textAlign: "center" }}>
@@ -178,6 +179,8 @@ const Reviews = () => {
     //     ))}
     //   </Grid>
     // </Box>
+
+   
   );
 };
 
