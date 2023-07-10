@@ -25,7 +25,7 @@ import PaymentIcon from "@mui/icons-material/Payment";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import AdminDashboard from "./AdminDashboard";
-
+import UpdateOrders from "./UpdateOrders";
 // import UpdateOrders from "./UpdateOrders";
 
 const drawerWidth = 230;
