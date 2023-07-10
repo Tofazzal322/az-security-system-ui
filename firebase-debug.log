@@ -1,0 +1,83 @@
+[debug] [2023-07-10T20:57:25.127Z] ----------------------------------------------------------------------
+[debug] [2023-07-10T20:57:25.129Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-10T20:57:25.130Z] CLI Version:   9.23.3
+[debug] [2023-07-10T20:57:25.130Z] Platform:      win32
+[debug] [2023-07-10T20:57:25.130Z] Node Version:  v18.16.0
+[debug] [2023-07-10T20:57:25.137Z] Time:          Tue Jul 11 2023 00:57:25 GMT+0400 (Gulf Standard Time)
+[debug] [2023-07-10T20:57:25.137Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-10T20:57:25.153Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-07-10T20:57:25.590Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-10T20:57:25.590Z] > authorizing via signed-in user (topuahammed322@gmail.com)
+[debug] [2023-07-10T20:57:25.591Z] [iam] checking project az-security-system for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-10T20:57:25.593Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2023-07-10T20:57:25.594Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2023-07-10T20:57:25.992Z] <<< HTTP RESPONSE 400 {"pragma":"no-cache","date":"Mon, 10 Jul 2023 20:57:26 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2023-07-10T20:57:25.996Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/az-security-system:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-10T20:57:26.237Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-07-10T20:57:26.238Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-07-10T20:57:27.524Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Mon, 10 Jul 2023 20:57:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1198","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2023-07-10T20:57:27.525Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2023-07-10T20:57:27.531Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-07-10T20:57:27.536Z] > refreshing access token with scopes: []
+[debug] [2023-07-10T20:57:27.537Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2023-07-10T20:57:27.880Z] <<< HTTP RESPONSE 400 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Mon, 10 Jul 2023 20:57:28 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2023-07-10T20:57:27.884Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/az-security-system [none]
+[debug] [2023-07-10T20:57:28.313Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/az-security-system 401
+[debug] [2023-07-10T20:57:28.313Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/az-security-system {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-07-10T20:57:28.313Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-07-10T20:57:28.679Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:241:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Client.request (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:73:9)
+    at async C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project az-security-system. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-07-10T21:00:06.529Z] ----------------------------------------------------------------------
+[debug] [2023-07-10T21:00:06.533Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-10T21:00:06.534Z] CLI Version:   9.23.3
+[debug] [2023-07-10T21:00:06.534Z] Platform:      win32
+[debug] [2023-07-10T21:00:06.534Z] Node Version:  v18.16.0
+[debug] [2023-07-10T21:00:06.535Z] Time:          Tue Jul 11 2023 01:00:06 GMT+0400 (Gulf Standard Time)
+[debug] [2023-07-10T21:00:06.536Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-10T21:00:06.626Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-10T21:00:06.627Z] > authorizing via signed-in user (topuahammed322@gmail.com)
+[debug] [2023-07-10T21:00:06.627Z] [iam] checking project az-security-system for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-10T21:00:06.633Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2023-07-10T21:00:06.633Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2023-07-10T21:00:07.066Z] <<< HTTP RESPONSE 400 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Mon, 10 Jul 2023 21:00:07 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2023-07-10T21:00:07.070Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/az-security-system:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-10T21:00:08.452Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Mon, 10 Jul 2023 21:00:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1198","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2023-07-10T21:00:08.452Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2023-07-10T21:00:08.455Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-07-10T21:00:08.457Z] > refreshing access token with scopes: []
+[debug] [2023-07-10T21:00:08.457Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2023-07-10T21:00:08.755Z] <<< HTTP RESPONSE 400 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Mon, 10 Jul 2023 21:00:08 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2023-07-10T21:00:08.757Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/az-security-system [none]
+[debug] [2023-07-10T21:00:09.086Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/az-security-system 401
+[debug] [2023-07-10T21:00:09.086Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/az-security-system {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-07-10T21:00:09.087Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-07-10T21:00:09.390Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:241:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Client.request (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:73:9)
+    at async C:\Users\topua\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project az-security-system. Please make sure the project exists and your account has permission to access it.
