@@ -119,7 +119,7 @@ const useFirebase = () => {
 
   /////////////////////// Check Admin and   Admin Data Load  //////////////////////
   useEffect(() => {
-    fetch(`https://fathomless-shelf-34125.herokuapp.com/users/${user.email}`)
+    fetch(`https://az-security.onrender.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -142,7 +142,7 @@ const useFirebase = () => {
 
   const saveUserToDatabase = (email, displayName) => {
     const user = { email, displayName };
-    fetch("https://fathomless-shelf-34125.herokuapp.com/users", {
+    fetch("https://az-security.onrender.com/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -155,7 +155,7 @@ const useFirebase = () => {
   ///////////////////////// Save Google User To database   ////////////////////////////////
   const saveGoogleUserToDatabase = (email, displayName) => {
     const user = { email, displayName };
-    fetch("https://fathomless-shelf-34125.herokuapp.com/users", {
+    fetch("https://az-security.onrender.com/users", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
